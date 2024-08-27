@@ -63,3 +63,41 @@ Components of MVC
 
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220224160807/Model1.png"/>
 
+1. Controller:
+The controller is the component that enables the interconnection between the views and the model so it acts as an intermediary. The controller doesn’t have to worry about handling data logic, it just tells the model what to do. It processes all the business logic and incoming requests, manipulates data using the Model component, and interact with the View to render the final output.
+
+Responsibilities:
+* Receiving user input and interpreting it.
+* Updating the Model based on user actions.
+* Selecting and displaying the appropriate View.
+
+2. View:
+The View component is used for all the UI logic of the application. It generates a user interface for the user. Views are created by the data which is collected by the model component but these data aren’t taken directly but through the controller. It only interacts with the controller. In MERN stack view part will be our React Application that take care of all the UI logic of the application.
+
+Responsibilities:
+* Rendering data to the user in a specific format.
+* Displaying the user interface elements.
+* Updating the display on UI actions by end user.
+
+Model:
+The Model component corresponds to all the data-related logic that the user works with. This can represent either the data that is being transferred between the View and Controller components or any other business logic-related data. It can add or retrieve data from the database. It responds to the controller’s request because the controller can’t interact with the database by itself. The model interacts with the database and gives the required data back to the controller.In model part we define schemas for different data collections that manage data communication between controller and database.
+
+Responsibilities:
+* The model layer is responsible for the application's data logic and storing and retrieving data from back-end data stores. The model layer might also include mechanisms for validating data and carrying out other data-related tasks.
+
+
+Here's a simplified and corrected version of your explanation:
+
+---
+
+**Example:** We have a basic application that shows a list of books. The user can filter these books or click on any book to see its details. They can also add, update, or delete books from the list.
+
+In the **Model** part, there’s a pre-defined schema for a book, which includes properties like the book's name, author, publish date, etc. When a user wants to add a new book, they fill out a form on the **View** part, created using HTML, CSS, and JavaScript. After filling out the form, the user clicks the "Add" button, which sends a POST request with the form data.
+
+This request goes to the **Controller**, which handles input requests. The controller checks if all the required data is provided. If everything is correct, the controller sends this data to the **Service** part, which is a more detailed breakdown of the controller’s tasks.
+
+In the **Service** part, the data is saved in the database using the book schema defined in the model. The model checks that all validations are met before creating a new entry in the database. If the data is successfully saved, the model sends a success response back to the controller, which then sends it to the view, letting the user know the book was added successfully. If there’s any error during this process, the controller sends an error message back to the user in the view.
+
+---
+
+This version keeps the explanation clear and straightforward.
