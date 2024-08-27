@@ -1,0 +1,49 @@
+USESTATE HOOKS : 
+
+1. ==> Defination : The useState hook is a function that allows you to add state to a functional component in React. It returns an array with two elements: the current state value and a function to update that state. It lets you manage and persist data within a component.
+
+2. ==> Can useState accept a function as an initial state? Why might you use this feature?
+
+       Yes, useState can accept a function as an initial state. This is useful for lazy initialization, where the initial state is derived from a function that is only called once, when the component is first rendered. This can be beneficial for performance if the initial state is computationally expensive.
+
+                      const [count, setCount] = useState(() => computeExpensiveValue());
+
+3. ==> How does useState differ from the class-based setState?
+
+       useState is used in functional components, whereas setState is used in class components. useState doesn't automatically merge state updates like setState; instead, it replaces the state. You need to manually handle the merging of state when using useState with objects or arrays.
+       
+
+4. ==> What happens if you call the state setter function with the same value as the current state?
+
+       If you call the setter function with the same value as the current state, React will recognize that the state hasn't changed and will not trigger a re-render of the component.       
+       
+       
+5. ==> How would you update an object or array in state with useState?
+
+       To update an object or array in state, you need to create a new copy of the object or array and then update the state with that new copy, ensuring immutability:
+
+			const [user, setUser] = useState({ name: 'John', age: 30 });
+			// Updating an object
+			setUser(prevUser => ({ ...prevUser, age: 31 }));
+			const [items, setItems] = useState([1, 2, 3]);
+			// Updating an array
+			setItems(prevItems => [...prevItems, 4]);       
+
+6. ==> Can you explain a situation where useState might cause performance issues, and how you would optimize it?
+
+     useState can cause performance issues if the state updates frequently and causes unnecessary re-renders. For example, updating a large list or object in state could be expensive. To optimize, you can use useMemo or useCallback to memoize values or functions that depend on the state, or you can colocate state to reduce the number of updates.
+     
+     
+     
+==> Can you show how to store and update a list of items in state?
+
+       You can store and update a list of items like this:
+
+			const [items, setItems] = useState([]);
+			const addItem = (item) => {
+			  setItems(prevItems => [...prevItems, item]);
+			};
+			const removeItem = (index) => {
+			  setItems(prevItems => prevItems.filter((_, i) => i !== index));
+			};     
+			     			
