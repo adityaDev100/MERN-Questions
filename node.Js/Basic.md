@@ -85,11 +85,6 @@ The Model component corresponds to all the data-related logic that the user work
 Responsibilities:
 * The model layer is responsible for the application's data logic and storing and retrieving data from back-end data stores. The model layer might also include mechanisms for validating data and carrying out other data-related tasks.
 
-
-Here's a simplified and corrected version of your explanation:
-
----
-
 **Example:** We have a basic application that shows a list of books. The user can filter these books or click on any book to see its details. They can also add, update, or delete books from the list.
 
 In the **Model** part, there’s a pre-defined schema for a book, which includes properties like the book's name, author, publish date, etc. When a user wants to add a new book, they fill out a form on the **View** part, created using HTML, CSS, and JavaScript. After filling out the form, the user clicks the "Add" button, which sends a POST request with the form data.
@@ -97,7 +92,3 @@ In the **Model** part, there’s a pre-defined schema for a book, which includes
 This request goes to the **Controller**, which handles input requests. The controller checks if all the required data is provided. If everything is correct, the controller sends this data to the **Service** part, which is a more detailed breakdown of the controller’s tasks.
 
 In the **Service** part, the data is saved in the database using the book schema defined in the model. The model checks that all validations are met before creating a new entry in the database. If the data is successfully saved, the model sends a success response back to the controller, which then sends it to the view, letting the user know the book was added successfully. If there’s any error during this process, the controller sends an error message back to the user in the view.
-
----
-
-This version keeps the explanation clear and straightforward.
