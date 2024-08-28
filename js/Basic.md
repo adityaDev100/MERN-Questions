@@ -4,7 +4,6 @@ A **closure** is formed when a function is bundled together with its lexical sco
 
 ### Example 1:
 
-```javascript
 function x() {
     var a = 7;
     function y() {
