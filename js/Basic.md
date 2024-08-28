@@ -38,24 +38,24 @@ When you create a closure, you gain access to an outer function’s scope from a
 
 * Function that returns a once function
 
-function createOnceFunction() {
-    let hasBeenCalled = false;
+        function createOnceFunction() {
+            let hasBeenCalled = false;
 
-    return function () {
-        if (!hasBeenCalled) {
-            console.log('Function called!');
-            hasBeenCalled = true;
-        } else {
-            console.log('Function can only be called once.');
+            return function () {
+                if (!hasBeenCalled) {
+                    console.log('Function called!');
+                    hasBeenCalled = true;
+                } else {
+                    console.log('Function can only be called once.');
+                }
+            };
         }
-    };
-}
 
-// Create the once function
-const callOnce = createOnceFunction();
+        // Create the once function
+        const callOnce = createOnceFunction();
 
-// Call the function the first time
-callOnce(); // Output: Function called!
+        // Call the function the first time
+        callOnce(); // Output: Function called!
 
-// Call the function again
-callOnce(); // Output: Function can only be called once.
+        // Call the function again
+        callOnce(); // Output: Function can only be called once.
