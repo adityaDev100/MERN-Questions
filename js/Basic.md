@@ -2,31 +2,29 @@
 
 A **closure** is formed when a function is bundled together with its lexical scope. This allows the inner function to access variables from the outer function’s scope. In JavaScript, closures are automatically created every time a function is defined.
 
-### Example 1:
-
-function x() {
-    var a = 7;
-    function y() {
-        console.log(a);
-    }
-    y();
-}
-x();
+//Example 1:
+        function x() {
+            var a = 7;
+            function y() {
+                console.log(a);
+            }
+            y();
+        }
+        x();
 
 Output: 7 will print to the console because the inner function y has access to the outer function x's variable a.
 
-* 2.
+//Example 2:
+        function x() {
+            let a = 7;
+            function y() {
+                console.log(a);
+            }
+            return y;
+        }
 
-function x() {
-    let a = 7;
-    function y() {
-        console.log(a);
-    }
-    return y;
-}
-
-let z = x();
-z();
+        let z = x();
+        z();
 
         then 7 will print in console cause inner function has access to outer function even function x is exist in call stack anymore.but still it remember its lexical scope
 
