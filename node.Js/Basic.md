@@ -92,3 +92,4 @@ In the **Model** part, there’s a pre-defined schema for a book, which includes
 This request goes to the **Controller**, which handles input requests. The controller checks if all the required data is provided. If everything is correct, the controller sends this data to the **Service** part, which is a more detailed breakdown of the controller’s tasks.
 
 In the **Service** part, the data is saved in the database using the book schema defined in the model. The model checks that all validations are met before creating a new entry in the database. If the data is successfully saved, the model sends a success response back to the controller, which then sends it to the view, letting the user know the book was added successfully. If there’s any error during this process, the controller sends an error message back to the user in the view.
+

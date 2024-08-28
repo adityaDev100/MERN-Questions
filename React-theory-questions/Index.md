@@ -143,3 +143,4 @@ In React, synthetic events are a way to handle events that work the same across 
 
 e.preventDefault()  =====>  prevents all the default behavior by the browser.
 e.stopPropagation() =====>  prevents the call to the parent component whenever a child component gets called.
+
