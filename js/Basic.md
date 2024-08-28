@@ -36,7 +36,8 @@ When you create a closure, you gain access to an outer function’s scope from a
 
 # Closure UseCase  
 
-// Function that returns a once function
+* Function that returns a once function
+
 function createOnceFunction() {
     let hasBeenCalled = false;
 
