@@ -11,7 +11,7 @@
 | These variables are hoisted.                                                             | These variables are hoisted but stay in the temporal dead zone until the initialization.  | These variables are hoisted but stay in the temporal dead zone until the initialization.     |
 
 
-
+```javascript
 var a= 12;
 var a = 70
 a = 60 // we can re-declare and update this in any scope
@@ -44,5 +44,5 @@ const c = 2
 console.log(x,a,c)
 
 
-
+```
 
