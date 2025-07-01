@@ -5,6 +5,17 @@ hoisting is a phenomena in javascript by which we can access variables and funct
 Concept Explanation : whenever we run any javascript code then first of all a global execution context is created in js engine call stack , before going to execute the first line of code in the global memory space memory allocated for all variables and functions , for variables undefined keyword and for functions a copy of the function block is stored in global memory space , 
 So now js code executed line by line :
 
+
+✅ What is Hoisting in JavaScript?
+Hoisting is JavaScript's default behavior of moving declarations to the top of their scope (either function or global) before code execution.
+
+🔍 What gets hoisted?
+Variables declared with var are hoisted but initialized as undefined.
+Functions declared using the function keyword are fully hoisted.
+let and const are also hoisted, but they remain in a "temporal dead zone" (TDZ) until they are initialized.
+
+
+
 We can understand it by below example : 
 
         console.log(x)

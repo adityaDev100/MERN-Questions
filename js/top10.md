@@ -5,7 +5,8 @@ Answer: JavaScript is a versatile and widely-used programming language primarily
 Answer: null represents the intentional absence of any value. undefined is the default value of a variable that has been declared but not assigned a value.
 
 3. Explain the concept of closures in JavaScript.
-Answer: A closure is a function that retains access to variables from its outer (enclosing) function even after the outer function has finished executing. This allows the inner function to continue referencing those variables.
+Answer: Function along with it lexical scope bundled together forms a closure.
+When you create a closure, you gain access to an outer function’s scope from an inner function. Closures are automatically created every time a function is defined in JavaScript.
 
 4. What is the purpose of the this keyword in JavaScript?
 Answer: The this keyword refers to the context in which a function is executed. It can be affected by how the function is called, and it helps to access properties and methods of an object.

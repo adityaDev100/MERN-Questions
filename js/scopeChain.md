@@ -1,6 +1,6 @@
 # What is Lexical environment ? 
 
-Lexical environment is created whenever an execution context is created in call stack of us engine,
+Lexical environment is created whenever an execution context is created in call stack of js engine,
 Lexical environment is local memory+ lexical environment of the parent (lexical parent) in call stack,
 
 The chain of lexical environment is called scope chain

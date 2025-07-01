@@ -3,6 +3,18 @@
 Function along with it lexical scope bundled together forms a closure.
 When you create a closure, you gain access to an outer function’s scope from an inner function. Closures are automatically created every time a function is defined in JavaScript.
 
+A closure is a feature in JavaScript where an inner function has access to the variables of its outer function, even after the outer function has finished executing.
+
+🔑 A closure has access to:
+Its own variables
+Variables of the outer function
+Global variables
+
+🧠 Why are closures useful?
+Data privacy (like private variables)
+Maintaining state
+Creating function factories
+
 # example : 
 
 * 1.
