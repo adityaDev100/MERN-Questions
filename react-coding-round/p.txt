@@ -1,0 +1,75 @@
+console.log("A");
+
+setTimeout(() => {
+  console.log("B");
+  Promise.resolve().then(() => console.log("C"));
+}, 0);
+
+Promise.resolve().then(console.log("D"));
+
+console.log("E");
+
+
+// A
+// D
+// E
+// B 
+// C
+
+
+
+let input = ["eat", "tea", "tan", "ate", "nat", "bat"]
+    //[["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+
+    
+    
+function Anagram(arr){
+    
+    const temp = {}
+    const final = []
+    
+    arr.forEach((element,index)=>{
+    const sortedText = element.split("").sort().join("")
+    if(temp.hasOwnProperty(sortedText)){
+        temp[sortedText].push(element)
+    }else{
+    temp[sortedText] = [element]
+    }
+    })
+    
+    
+    
+    Object.entries(temp).map(([key,value])=>{
+        final.push(value)
+    })
+    
+    return final;  
+}
+    
+    
+const output = Anagram(input)
+console.log(output)
+    
+    
+     
+
+let input = [1, [4, 5, [2, 8], 7], 5, [5], 3, [6, 9, 5, [2, 5]]];
+
+function flatMap(arr) {
+  let result = [];
+
+  function recursive(e) {
+    if (Array.isArray(e)) {
+      e.forEach(recursive); // recursively call on each element of the array
+    } else {
+      result.push(e);
+    }
+  }
+
+  recursive(arr);
+
+  return result;
+}
+
+let output = flatMap(input);
+console.log(output); // [1, 4, 5, 2, 8, 7, 5, 5, 3, 6, 9, 5, 2, 5]

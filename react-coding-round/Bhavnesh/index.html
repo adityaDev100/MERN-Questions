@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form
+  action="https://formspree.io/f/{FORM_ID}"
+  class="fs-form fs-layout__2-column"
+  target="_top"
+  method="POST"
+>
+  <div class="fs-field">
+    <label class="fs-label" for="name">Full Name</label>
+    <input class="fs-input" id="name" name="name" required />
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="email">Student Email</label>
+    <input class="fs-input" id="email" name="email" required />
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="gender">Gender</label>
+    <input class="fs-input" id="gender" name="gender" required />
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="phone">Phone Number</label>
+    <input
+      class="fs-input"
+      id="phone"
+      name="phone"
+      placeholder="(000) 000-0000"
+      required
+    />
+  </div>
+  <fieldset>
+    <div class="fs-field">
+      <label class="fs-label" for="address-1">Address line 1</label>
+      <input class="fs-input" id="address-1" name="address-1" />
+    </div>
+    <div class="fs-field">
+  <label class="fs-label" for="student-type">Student Type</label>
+  <select class="fs-input" id="student-type" name="student-type" required>
+    <option value="">-- Select Type --</option>
+    <option value="undergraduate">Undergraduate</option>
+    <option value="postgraduate">Postgraduate</option>
+    <option value="phd">PhD</option>
+    <option value="exchange">Exchange Student</option>
+  </select>
+</div>
+    <div class="fs-field">
+      <label class="fs-label" for="address-2">Address line 2</label>
+      <input class="fs-input" id="address-2" name="address-2" />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="city">City</label>
+      <input class="fs-input" id="city" name="city" />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="state">State / Province</label>
+      <input class="fs-input" id="state" name="state" />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="zip-code">Postal / Zip Code</label>
+      <input class="fs-input" id="zip-code" name="zip-code" />
+    </div>
+  </fieldset>
+  <div class="fs-field">
+    <label class="fs-label">
+      Please select the courses you wish to enrol for
+    </label>
+    <div class="fs-checkbox-group">
+      <div class="fs-checkbox-field">
+        <div class="fs-checkbox-wrapper">
+          <input
+            class="fs-checkbox"
+            id="courses-cs-101"
+            name="courses"
+            required
+            type="checkbox"
+            value="cs-101"
+          />
+        </div>
+        <div>
+          <label class="fs-label" for="courses-cs-101">
+            Introduction to Computing
+          </label>
+        </div>
+      </div>
+      <div class="fs-checkbox-field">
+        <div class="fs-checkbox-wrapper">
+          <input
+            class="fs-checkbox"
+            id="courses-e-101"
+            name="courses"
+            required
+            type="checkbox"
+            value="e-101"
+          />
+        </div>
+        <div>
+          <label class="fs-label" for="courses-e-101">English 101</label>
+        </div>
+      </div>
+      <div class="fs-checkbox-field">
+        <div class="fs-checkbox-wrapper">
+          <input
+            class="fs-checkbox"
+            id="courses-e-102"
+            name="courses"
+            required
+            type="checkbox"
+            value="e-102"
+          />
+        </div>
+        <div>
+          <label class="fs-label" for="courses-e-102">English 102</label>
+        </div>
+      </div>
+      <div class="fs-checkbox-field">
+        <div class="fs-checkbox-wrapper">
+          <input
+            class="fs-checkbox"
+            id="courses-h-101"
+            name="courses"
+            required
+            type="checkbox"
+            value="h-101"
+          />
+        </div>
+        <div>
+          <label class="fs-label" for="courses-h-101">History 101</label>
+        </div>
+      </div>
+      <div class="fs-checkbox-field">
+        <div class="fs-checkbox-wrapper">
+          <input
+            class="fs-checkbox"
+            id="courses-h-102"
+            name="courses"
+            required
+            type="checkbox"
+            value="h-102"
+          />
+        </div>
+        <div>
+          <label class="fs-label" for="courses-h-102">History 102</label>
+        </div>
+      </div>
+      <div class="fs-checkbox-field">
+        <div class="fs-checkbox-wrapper">
+          <input
+            class="fs-checkbox"
+            id="courses-em-1"
+            name="courses"
+            required
+            type="checkbox"
+            value="em-1"
+          />
+        </div>
+        <div>
+          <label class="fs-label" for="courses-em-1">Engineering Maths 1</label>
+        </div>
+      </div>
+      <div class="fs-checkbox-field">
+        <div class="fs-checkbox-wrapper">
+          <input
+            class="fs-checkbox"
+            id="courses-em-2"
+            name="courses"
+            required
+            type="checkbox"
+            value="em-2"
+          />
+        </div>
+        <div>
+          <label class="fs-label" for="courses-em-2">Engineering Maths 2</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fs-field col-span-full">
+    <label class="fs-label" for="comments">Additional comments</label>
+    <textarea class="fs-textarea" id="comments" name="comments"></textarea>
+  </div>
+  <div class="fs-button-group">
+    <button class="fs-button" type="submit">Submit</button>
+  </div>
+  
+</form>
+</body>
+</html>
