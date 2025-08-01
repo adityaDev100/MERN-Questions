@@ -56,23 +56,24 @@
 
 ///**Flat map by using recursion*/
 
-// let arr = [1,2,3,[2,4,[2,1,[3],[3,3,[1,1,1,1,1,1,[5,4,3,3]],4,[56]]],5],[56,34,12]]
+let arr = [1,2,3,[2,4,[2,1,[3],[3,3,[1,1,1,1,1,1,[5,4,3,3]],4,[56]]],5],[56,34,12]]
 
-// function flatMap(list) {
-//   let f = [];
-//   function recurse(arr) {
-//     arr.forEach((node) => {
-//       if (Array.isArray(node)) {
-//         return recurse(node);
-//       }
-//       f.push(node);
-//     });
-//   }
-//   recurse(list);
-//   return f
-// }
-// let a = flatMap(arr);
-// console.log(a);
+function flatMap(list) {
+  let f = [];
+  
+  function recurse(arr) {
+    arr.forEach((node) => {
+      if (Array.isArray(node)) {
+        return recurse(node);
+      }
+      f.push(node);
+    });
+  }
+  recurse(list);
+  return f
+}
+let a = flatMap(arr);
+console.log(a);
 
 
 
